@@ -1,3 +1,16 @@
-h1 {
-    color: red;
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Modules
+@import 'modules/navigation';
+@import 'modules/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-main;
 }

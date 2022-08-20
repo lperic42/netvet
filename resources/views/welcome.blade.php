@@ -1,6 +1,6 @@
 @include('partials.header')
 <body>
     <div id="app">
-        <example-component></example-component>
+        <navigation></navigation>
     </div>
 @include('partials.footer')
