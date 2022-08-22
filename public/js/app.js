@@ -2158,9 +2158,17 @@ var staticRenderFns = [function () {
     attrs: {
       href: "#"
     }
-  }, [_vm._v("Blog")])]), _vm._v(" "), _c("div", {
-    staticClass: "logo"
-  }, [_c("p", [_vm._v("Logo")])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("Blog")])]), _vm._v(" "), _c("a", {
+    staticClass: "navigation--logo",
+    attrs: {
+      href: "#"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: __webpack_require__(/*! ../../images/logo.png */ "./resources/images/logo.png"),
+      alt: "NetVet - Online veterinar"
+    }
+  })]), _vm._v(" "), _c("div", {
     staticClass: "navigation--contact"
   }, [_c("a", {
     attrs: {
@@ -2242,6 +2250,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/images/logo.png":
+/*!***********************************!*\
+  !*** ./resources/images/logo.png ***!
+  \***********************************/
+/***/ ((module) => {
+
+module.exports = "/images/logo.png?caaaf6d6bf5de249e234f867f1fa94dc";
 
 /***/ }),
 

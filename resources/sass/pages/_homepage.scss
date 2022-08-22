@@ -1,0 +1,43 @@
+.section-hero {
+    .hero {
+        background: rgb(164,204,239);
+        background: linear-gradient(90deg, rgba(164,204,239,1) 0%, rgba(137,196,249,1) 25%, rgba(83,168,242,1) 100%);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        height: 700px;
+        max-height: 800px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-20%);
+
+            h1 {
+                font-size: 110px;
+            }
+
+            p {
+                font-size: 50px;
+            }
+        }
+
+        .cat-paws {
+            height: 500px;
+            width: 500px;
+            background: url('../../images/cat-paw-print-transparent-background-17.png');
+        }
+    }
+}

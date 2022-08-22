@@ -1,9 +1,20 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Quattrocento:wght@400;700&display=swap');
+
+// Variables
+@import 'variables';
 
 // Modules
 @import 'modules/navigation';
-@import 'modules/variables';
+
+
+// Pages
+@import 'pages/homepage';
+
+/* Bootstrap */
+@import '~bootstrap/scss/bootstrap';
+
 
 * {
     margin: 0;

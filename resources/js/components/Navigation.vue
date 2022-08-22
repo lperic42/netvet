@@ -5,9 +5,9 @@
                 <a href="#">O nama</a>
                 <a href="#">Blog</a>
             </div>
-            <div class="logo">
-                <p>Logo</p>
-            </div>
+            <a href="#" class="navigation--logo">
+                <img src="../../images/logo.png" alt="NetVet - Online veterinar">
+            </a>
             <div class="navigation--contact">
                 <a href="#">Imaš pitanje?</a>
             </div>
