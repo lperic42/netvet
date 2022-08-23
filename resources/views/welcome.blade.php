@@ -6,13 +6,12 @@
         <section class="section-hero">
             <div class="hero">
                 <div class="heading">
-                    <h1>NetVet</h1>
-                    <p>Vaš online veterinar</p>
+                    <h1><span>NetVet</span>.com</h1>
+                    <p>Veterinar koji je dostupan u svakom trenutku.</p>
                 </div>
                 <div class="cta">
-                    <a href="#">Klikni</a>
+                    <a href="#">Pročitaj naše savjete</a>
                 </div>
-                <div class="cat-paws"></div>
             </div>
         </section>
 
