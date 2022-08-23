@@ -2086,7 +2086,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Navigation"
+  name: "Navigation",
+  data: function data() {
+    return {
+      mobileActive: false
+    };
+  },
+  methods: {
+    toggleMobileNav: function toggleMobileNav() {
+      this.mobileActive = !this.mobileActive;
+      console.log(this.mobileActive);
+    }
+  }
 });
 
 /***/ }),
@@ -2137,7 +2148,37 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("div", {
+    staticClass: "navigation-wrap"
+  }, [_c("div", {
+    staticClass: "navigation"
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c("div", {
+    staticClass: "hamburger",
+    "class": {
+      hamburger__active: _vm.mobileActive
+    },
+    on: {
+      click: _vm.toggleMobileNav
+    }
+  }, [_c("div"), _vm._v(" "), _c("div"), _vm._v(" "), _c("div")])]), _vm._v(" "), _c("div", {
+    "class": this.mobileActive ? "mobile-navigation-active" : "mobile-navigation"
+  }, [_c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Početna")]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("O nama")]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Blog")]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Imaš pitanje?")])])]);
 };
 
 var staticRenderFns = [function () {
@@ -2145,10 +2186,6 @@ var staticRenderFns = [function () {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "navigation-wrap"
-  }, [_c("div", {
-    staticClass: "navigation"
-  }, [_c("div", {
     staticClass: "navigation--items"
   }, [_c("a", {
     attrs: {
@@ -2158,7 +2195,12 @@ var staticRenderFns = [function () {
     attrs: {
       href: "#"
     }
-  }, [_vm._v("Blog")])]), _vm._v(" "), _c("a", {
+  }, [_vm._v("Blog")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("a", {
     staticClass: "navigation--logo",
     attrs: {
       href: "#"
@@ -2168,13 +2210,18 @@ var staticRenderFns = [function () {
       src: __webpack_require__(/*! ../../images/logo.png */ "./resources/images/logo.png"),
       alt: "NetVet - Online veterinar"
     }
-  })]), _vm._v(" "), _c("div", {
+  })]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
     staticClass: "navigation--contact"
   }, [_c("a", {
     attrs: {
       href: "#"
     }
-  }, [_vm._v("Imaš pitanje?")])])])]);
+  }, [_vm._v("Imaš pitanje?")])]);
 }];
 render._withStripped = true;
 

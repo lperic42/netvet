@@ -6,7 +6,8 @@
   box-shadow: 0 1px 2px -1px #000;
   height: 80px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   font-family: "Nunito", sans-serif;
 }
 .navigation-wrap .navigation {
@@ -23,9 +24,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 10%;
+  min-width: 10%;
 }
 .navigation-wrap .navigation--items a {
+  margin-right: 20px;
   text-decoration: none;
   color: #000;
   transition: all 0.2s ease-in-out;
@@ -48,7 +50,59 @@
 .navigation-wrap .navigation--contact a:hover {
   color: #a4ccef;
 }
+.navigation-wrap .navigation .hamburger {
+  width: 30px;
+  height: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+.navigation-wrap .navigation .hamburger__active {
+  transform: rotate(90deg);
+}
+.navigation-wrap .navigation .hamburger div {
+  background-color: #000;
+  height: 2px;
+  width: 100%;
+}
+.navigation-wrap .mobile-navigation {
+  width: 250px;
+  background-color: white;
+  min-height: 500px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: -100%;
+  transition: all 0.2s ease-in-out;
+}
+.navigation-wrap .mobile-navigation-active {
+  width: 250px;
+  background-color: white;
+  min-height: 500px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 0;
+  transition: all 0.2s ease-in-out;
+}
 
+@media (max-width: 768px) {
+  .navigation-wrap .navigation--items {
+    display: none;
+  }
+  .navigation-wrap .navigation--contact {
+    display: none;
+  }
+  .navigation-wrap .navigation .hamburger {
+    display: flex;
+  }
+}
 .section-hero {
   background: url("/images/Untitled design.png?87d8b1f69a4b8c633b98a0f7d7ed4226");
   -webkit-background-size: cover;
