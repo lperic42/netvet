@@ -162,6 +162,35 @@
   color: #fff;
 }
 
+.section-about {
+  min-height: 200px;
+  border-bottom: 1px solid #a4ccef;
+}
+.section-about .about {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-about .about--text {
+  margin-top: 30px;
+}
+.section-about .about--text h2, .section-about .about--text .h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.section-about .about--text p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+
 @media (max-width: 768px) {
   .section-hero .hero .heading h1, .section-hero .hero .heading .h1 {
     font-size: 60px;
