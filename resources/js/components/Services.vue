@@ -5,7 +5,7 @@
                 <div class="col-md-12">
                     <div class="heading-section">
                         <h2>Samo najbolje za Vaše ljubimce</h2>
-                        <img src="images/under-heading.png" alt="" >
+                        <img class="sectionbreak" src="images/sectionbreak3.png" alt="" >
                     </div>
                 </div>
             </div>

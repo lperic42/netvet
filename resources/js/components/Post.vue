@@ -1,12 +1,13 @@
 <template>
     <div class="col-md-4 col-sm-6">
+        <a href="#">
         <div class="blog-post">
             <div class="blog-thumb">
-                <img src="images/blogpost1.jpg" alt="" />
+                <img src="images/animal-g6b6bd963e_1280.jpg" alt="" />
             </div>
             <div class="blog-content">
                 <div class="content-show">
-                    <h4><a href="single-post.html">Summer Sandwich</a></h4>
+                    <h4><a href="#">Summer Sandwich</a></h4>
                     <span>29 Sep 2084</span>
                 </div>
                 <div class="content-hide" id="hiddenContent">
@@ -14,6 +15,7 @@
                 </div>
             </div>
         </div>
+        </a>
     </div>
 </template>
 

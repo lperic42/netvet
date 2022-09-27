@@ -3835,6 +3835,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Post"
 });
@@ -84231,33 +84233,35 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4 col-sm-6" }, [
-      _c("div", { staticClass: "blog-post" }, [
-        _c("div", { staticClass: "blog-thumb" }, [
-          _c("img", { attrs: { src: "images/blogpost1.jpg", alt: "" } }),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "blog-content" }, [
-          _c("div", { staticClass: "content-show" }, [
-            _c("h4", [
-              _c("a", { attrs: { href: "single-post.html" } }, [
-                _vm._v("Summer Sandwich"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("span", [_vm._v("29 Sep 2084")]),
+      _c("a", { attrs: { href: "#" } }, [
+        _c("div", { staticClass: "blog-post" }, [
+          _c("div", { staticClass: "blog-thumb" }, [
+            _c("img", {
+              attrs: { src: "images/animal-g6b6bd963e_1280.jpg", alt: "" },
+            }),
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "content-hide", attrs: { id: "hiddenContent" } },
-            [
-              _c("p", [
-                _vm._v(
-                  "Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin."
-                ),
+          _c("div", { staticClass: "blog-content" }, [
+            _c("div", { staticClass: "content-show" }, [
+              _c("h4", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Summer Sandwich")]),
               ]),
-            ]
-          ),
+              _vm._v(" "),
+              _c("span", [_vm._v("29 Sep 2084")]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "content-hide", attrs: { id: "hiddenContent" } },
+              [
+                _c("p", [
+                  _vm._v(
+                    "Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin."
+                  ),
+                ]),
+              ]
+            ),
+          ]),
         ]),
       ]),
     ])
@@ -84300,7 +84304,8 @@ var staticRenderFns = [
               _c("h2", [_vm._v("Samo najbolje za Vaše ljubimce")]),
               _vm._v(" "),
               _c("img", {
-                attrs: { src: "images/under-heading.png", alt: "" },
+                staticClass: "sectionbreak",
+                attrs: { src: "images/sectionbreak3.png", alt: "" },
               }),
             ]),
           ]),

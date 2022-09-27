@@ -9,12 +9,12 @@ http://www.templatemo.com/free-website-templates/417-grill
 /*-- Basic --*/
 a {
   text-decoration: none;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 a:hover {
   text-decoration: none;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .blue {
@@ -48,7 +48,9 @@ p {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
-
+.sectionbreak {
+    max-width: 100%;
+}
 .space30 {
 	margin-bottom: 30px;
 }
@@ -105,7 +107,7 @@ p {
 }
 
 .main-menu a:hover {
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .search-box {
@@ -184,7 +186,7 @@ p {
 }
 
 .timeline-thumb:hover {
-  border-color: #f78e21;
+  border-color: #26B1E2;
 }
 
 .timeline-thumb .thumb img {
@@ -223,7 +225,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 /*-- End Timeline --*/
@@ -280,7 +282,7 @@ p {
 }
 
 .author-caption a:hover {
-  background-color: #f78e21;
+  background-color: #26B1E2;
   color: #fff;
 }
 
@@ -299,7 +301,7 @@ p {
 }
 
 .author-details span {
-  color: #f78e21;
+  color: #26B1E2;
   text-transform: uppercase;
 }
 
@@ -363,7 +365,7 @@ p {
 
 
 #filters span:hover {
-  color: #f78e21;
+  color: #26B1E2;
   transition: all 0.3s ease-in;
 }
 
@@ -372,7 +374,7 @@ p {
 }
 
 .label-text a:hover {
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .label-text h3 {
@@ -389,7 +391,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   display: block;
-  color: #f78e21
+  color: #26B1E2
 }
 
 .portfolio-thumb img {
@@ -413,7 +415,7 @@ p {
   margin-left: -18px;
   margin-top: -18px;
   background-color: rgba(0,0,0, 0.1);
-  border: 1px solid #f78e21;
+  border: 1px solid #26B1E2;
   width: 80px;
   height: 80px;
   line-height: 80px;
@@ -433,7 +435,7 @@ p {
   text-align: center;
   font-size: 13px;
   width: 100%;
-  color: #f78e21;
+  color: #26B1E2;
   font-weight: 300;
 }
 
@@ -478,7 +480,7 @@ p {
 }
 
 .pagination a:hover {
-  background-color: #f78e21;
+  background-color: #26B1E2;
 }
 
 /*- End Products --*/
@@ -503,7 +505,7 @@ p {
 .product-title span {
   display: inline-block;
   font-size: 13px;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .product-content a {
@@ -556,7 +558,7 @@ p {
 
 .comment-body span {
   font-size: 14px;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .comment-body p {
@@ -567,7 +569,7 @@ p {
   text-transform: uppercase;
   font-size: 14px;
   color: #fff;
-  background-color: #f78e21;
+  background-color: #26B1E2;
   width: 80px;
   height: 30px;
   line-height: 30px;
@@ -623,7 +625,7 @@ textarea {
   height: 35px;
   line-height: 30px;
   text-align: center;
-  background-color: #f78e21;
+  background-color: #26B1E2;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -639,7 +641,7 @@ textarea {
   height: 35px;
   line-height: 30px;
   text-align: center;
-  background-color: #f78e21;
+  background-color: #26B1E2;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -686,7 +688,7 @@ textarea {
 }
 
 .info i {
-  color: #f78e21;
+  color: #26B1E2;
   margin-right: 10px;
   font-size: 18px;
 }
@@ -703,7 +705,7 @@ textarea {
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
-  background-color: #f78e21;
+  background-color: #26B1E2;
   margin-top: 0px;
   padding: 9px 15px 9px 15px;
 }
@@ -723,7 +725,7 @@ textarea {
 .archives-list i {
   font-size: 16px;
   margin-right: 5px;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .archives-list a {
@@ -733,7 +735,7 @@ textarea {
 }
 
 .archives-list a:hover {
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .recent-post {
@@ -770,13 +772,13 @@ textarea {
 }
 
 .recent-post-info a:hover {
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .recent-post-info span {
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .flickr-images {
@@ -790,7 +792,7 @@ textarea {
 }
 
 .flickr-images img:hover {
-  border: 3px solid #f78e21;
+  border: 3px solid #26B1E2;
   transition: all 0.1s ease-in;
   cursor: pointer;
 }
@@ -821,7 +823,7 @@ textarea {
   font-size: 48px;
   padding-bottom: 10px;
   font-weight: 500;
-  color: #f78e21;
+  color: #26B1E2;
   text-transform: uppercase;
 }
 
@@ -836,7 +838,7 @@ textarea {
   margin-top: 20px;
   text-decoration: none;
   display: inline-block;
-  background-color: #f78e21;
+  background-color: #26B1E2;
   width: 200px;
   height: 40px;
   text-align: center;
@@ -861,8 +863,8 @@ textarea {
 
 .icon i {
   border-radius: 50%;
-  border: 20px solid #f78e21;
-  color: #f78e21;
+  border: 20px solid #26B1E2;
+  color: #26B1E2;
   font-size: 28px;
   line-height: 80px;
   width: 120px;
@@ -892,8 +894,9 @@ textarea {
 }
 
 .blog-thumb {
-  overflow: hidden;
-  position: relative;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
 }
 
 .blog-thumb img {
@@ -901,25 +904,33 @@ textarea {
 }
 
 .blog-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0,0,0,0.7);
-  color: #fff;
-  padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
 }
 
 .content-show a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
+
+.content-show a:hover {
+    color: #fff
+}
+
+
 .content-show span {
-  color: #f78e21;
+  color: #fff;
 }
 
 .content-hide {
@@ -964,7 +975,7 @@ textarea {
 
 footer {
   background-color: #f3f3f3;
-  border-top: 4px solid #f78e21;
+  border-top: 1px solid #26B1E2;
   margin-top: 120px;
 }
 
@@ -1004,7 +1015,7 @@ footer {
 }
 
 .social-bottom a:hover {
-  background-color: #f78e21;
+  background-color: #26B1E2;
   color: #fff;
 }
 
@@ -1077,7 +1088,7 @@ footer {
 .shop-list i {
   font-size: 16px;
   margin-right: 5px;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .shop-list a {
@@ -1087,7 +1098,7 @@ footer {
 }
 
 .shop-list a:hover {
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .recent-post {
@@ -1119,13 +1130,13 @@ footer {
 }
 
 .recent-post-info a:hover {
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .recent-post-info span {
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  color: #f78e21;
+  color: #26B1E2;
 }
 
 .more-info p {
@@ -1146,7 +1157,7 @@ footer {
 }
 
 .more-info i {
-  color: #f78e21;
+  color: #26B1E2;
   margin-right: 10px;
   font-size: 18px;
 }
