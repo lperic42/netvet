@@ -3,18 +3,6 @@
     <div id="app">
         <navigation></navigation>
 
-{{--        <section class="section-hero">--}}
-{{--            <div class="hero">--}}
-{{--                <div class="heading">--}}
-{{--                    <h1><span>NetVet</span>.com</h1>--}}
-{{--                    <p>Veterinar koji je dostupan u svakom trenutku.</p>--}}
-{{--                </div>--}}
-{{--                <div class="cta">--}}
-{{--                    <a href="#">Pročitaj naše savjete</a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </section>--}}
-
         <section class="mb-10">
             <div class="p-5 text-center bg-image" style="background-image: linear-gradient(to right,#b7b7b7 ,transparent 100%), url('../images/Untitled design.png'); height: 600px; background-size: cover; background-position: 50% 50%; background-color: rgba(0, 0, 0, 0);">
                 <div class="mask" style="background-color: rgba(126,126,126,0.35)">
@@ -37,55 +25,216 @@
 
                     </div>
                 </div>
-                <div class="svg-container">
-                    <svg width="2000" height="128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="2000" y="128" viewBox="0 0 2000 128" enable-background="new 0 0 2000 128" xml:space="preserve">
-                <path opacity="0.2" fill="#e7e7e7" d="M1999.5,22.2c-346-0.6-524.6-4.7-878.8,4.4c-286.6,7.4-442.3,54-608.1,51.2
-    C307.3,74.3,202.5,5-0.5,28.1v100.4l2000-0.5V22.2z"></path>
-                        <path opacity="0.2" fill="#e7e7e7" d="M-0.3,46.1C251,15.3,440.9,84.7,499.6,98.4c54.7,12.8,122.5,12,186.7-5.3
-    c154.2-41.6,315.5-70.9,475.2-67.5s324.6,22.4,484.3,19.7c133-2.3,302.8,1.7,352.8,3.7c0,21.3,0,80,0,80H-0.5L-0.3,46.1z"></path>
-                        <path opacity="0.4" fill="#e7e7e7" d="M2000,41.2c-139.8-12.7-219.9-10.8-360.2-11.2c-285.5-0.8-487.5,18-736.2,51.1
-    C647,115.4,546.7,116.4,199.2,53.6C140.3,43,59.5,45.6-0.5,52.3V130h2000L2000,41.2z"></path>
-                        <path fill="#F7FAFC" d="M1634.6,50.1c-193.8,11.9-366.9,24.9-569,50c-110.2,13.7-221.2,21.5-332.3,19.6
-  c-187-3.3-344.5-29.7-560.9-69.8c-122.2-22.6-172.8-4-172.8-4V130h1998V46C1997.5,46,1831,38.1,1634.6,50.1z"></path>
-            </svg>
-                </div>
             </div>
-        </section>
-        <section class="section-about">
-            <div class="about">
-                <div class="about--text">
-                    <h2>Zdravlje naših krznenih prijatelja je uvijek  <br> na prvom mjestu</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut fugiat necessitatibus nemo odio qui, quis saepe.
-                        Accusantium adipisci animi aperiam asperiores aut cumque debitis delectus dolores, ea error est eveniet excepturi expedita explicabo
-                        facere harum illo illum itaque iusto laboriosam laborum maiores natus nemo nisi non officiis quae quisquam ratione reiciendis, sed sequi,
-                        sint soluta suscipit tempore temporibus vero voluptatem. Adipisci aperiam, eius excepturi itaque qui quia quibusdam. A, nobis, repellat!
-                        At delectus dignissimos eaque hic neque rem tempore voluptates? Ab alias animi commodi,
-                        consequatur cum cupiditate, in magni molestiae nam officia porro quidem quo rerum similique ut voluptate?</p>
-                </div>
-            </div>
+
         </section>
 
-        <section class="section-blogs">
-            <div class="blogs">
-                <div class="title">
-                    <h2>Zadnji blogovi</h2>
-                </div>
-                <div class="cards">
-                    <div class="single">
-                        <div class="image">
-                            <img src="https://static01.nyt.com/images/2022/05/10/science/28DOGS-BEHAVIOR1/28DOGS-BEHAVIOR1-superJumbo.jpg?quality=75&auto=webp" alt="">
+        <services></services>
+
+
+        <div id="latest-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="heading-section">
+                            <h2>Zadnji blogovi</h2>
+                            <img src="images/under-heading.png" alt="" >
                         </div>
-                        <div class="text">
-                            <h3>Naslov</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, quas.</p>
-                            <a href="#">Pročitaj</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="images/blogpost1.jpg" alt="" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4><a href="single-post.html">Summer Sandwich</a></h4>
+                                    <span>29 Sep 2084</span>
+                                </div>
+                                <div class="content-hide">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="images/blogpost2.jpg" alt="" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4><a href="single-post.html">New Great Taste</a></h4>
+                                    <span>23 Sep 2084</span>
+                                </div>
+                                <div class="content-hide">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="images/blogpost3.jpg" alt="" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4><a href="single-post.html">Spicy Pizza</a></h4>
+                                    <span>14 Sep 2084</span>
+                                </div>
+                                <div class="content-hide">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="images/blogpost4.jpg" alt="" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4><a href="single-post.html">Healthy Food</a></h4>
+                                    <span>25 Aug 2084</span>
+                                </div>
+                                <div class="content-hide">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="images/blogpost5.jpg" alt="" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4><a href="single-post.html">Great Breakfast</a></h4>
+                                    <span>17 Aug 2084</span>
+                                </div>
+                                <div class="content-hide">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="images/blogpost6.jpg" alt="" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4><a href="single-post.html">Fresh Fruit Juice</a></h4>
+                                    <span>12 Aug 2084</span>
+                                </div>
+                                <div class="content-hide">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
+        <footer>
+            <div class="container">
+                <div class="top-footer">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="subscribe-form">
+                                <span>Get in touch with us</span>
+                                <form method="get" class="subscribeForm">
+                                    <input id="subscribe" type="text" />
+                                    <input type="submit" id="submitButton" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="social-bottom">
+                                <span>Follow us:</span>
+                                <ul>
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-rss"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-footer">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="about">
+                                <h4 class="footer-title">About Grill</h4>
+                                <p>Grill is free HTML5 template by <span class="blue">template</span><span class="green">mo</span> and it is a free responsive bootstrap layout that can be applied for any purpose.
+                                    <br><br>Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for photos used in this template. Nam commodo erat quis ligula placerat viverra.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="shop-list">
+                                <h4 class="footer-title">Shop Categories</h4>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>New Grill Menu</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>Healthy Fresh Juices</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>Spicy Delicious Meals</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>Simple Italian Pizzas</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>Pure Good Yogurts</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>Ice-cream for kids</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="recent-posts">
+                                <h4 class="footer-title">Recent posts</h4>
+                                <div class="recent-post">
+                                    <div class="recent-post-thumb">
+                                        <img src="images/recent-post1.jpg" alt="">
+                                    </div>
+                                    <div class="recent-post-info">
+                                        <h6><a href="#">Delicious and Healthy Menus</a></h6>
+                                        <span>24/12/2084</span>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <div class="recent-post-thumb">
+                                        <img src="images/recent-post2.jpg" alt="">
+                                    </div>
+                                    <div class="recent-post-info">
+                                        <h6><a href="#">Simple and effective meals</a></h6>
+                                        <span>18/12/2084</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="more-info">
+                                <h4 class="footer-title">More info</h4>
+                                <p>Sed dignissim, diam id molestie faucibus, purus nisl pretium quam, in pulvinar velit massa id elit.</p>
+                                <ul>
+                                    <li><i class="fa fa-phone"></i>010-020-0340</li>
+                                    <li><i class="fa fa-globe"></i>123 Dagon Studio, Yakin Street, Digital Estate</li>
+                                    <li><i class="fa fa-envelope"></i><a href="#">info@company.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-footer">
+                    <p>
+                        	<span>Copyright © 2084 <a href="#">Your Company Name</a>
+                            | Design: <a rel="nofollow" href="http://www.templatemo.com" target="_parent"><span class="blue">template</span><span class="green">mo</span></a></span>
+                    </p>
+                </div>
 
+            </div>
+        </footer>
 
     </div>
 @include('partials.footer')

@@ -6,7 +6,7 @@
                 <a href="#">Blog</a>
             </div>
             <a href="#" class="navigation--logo">
-                <img src="../../images/logo.png" alt="NetVet - Online veterinar">
+                <img :src="'../../images/logo.png'" alt="NetVet - Online veterinar">
             </a>
             <div class="navigation--contact">
                 <a href="#">Imaš pitanje?</a>
