@@ -7,8 +7,8 @@
             </div>
             <div class="blog-content">
                 <div class="content-show">
-                    <h4><a href="#">Summer Sandwich</a></h4>
-                    <span>29 Sep 2084</span>
+                    <h4><a href="#">Kako izmoriti psa na plaži?</a></h4>
+                    <span>29 Sep 2022</span>
                 </div>
                 <div class="content-hide" id="hiddenContent">
                     <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>

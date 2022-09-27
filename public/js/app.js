@@ -84244,10 +84244,12 @@ var staticRenderFns = [
           _c("div", { staticClass: "blog-content" }, [
             _c("div", { staticClass: "content-show" }, [
               _c("h4", [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Summer Sandwich")]),
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v("Kako izmoriti psa na plaži?"),
+                ]),
               ]),
               _vm._v(" "),
-              _c("span", [_vm._v("29 Sep 2084")]),
+              _c("span", [_vm._v("29 Sep 2022")]),
             ]),
             _vm._v(" "),
             _c(
