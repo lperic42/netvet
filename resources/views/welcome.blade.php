@@ -54,16 +54,4 @@
             </div>
         </div>
 
-        <footer>
-            <div class="container">
-                <div class="bottom-footer">
-                    <p>
-                        	<span>Copyright © 2022 <a href="#">NetVet</a></span>
-                    </p>
-                </div>
-
-            </div>
-        </footer>
-
-    </div>
 @include('partials.footer')

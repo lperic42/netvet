@@ -3470,6 +3470,39 @@ footer {
     font-size: 18px;
   }
 }
+.searchWrap {
+  height: 200px;
+  background-color: rgb(164, 204, 239);
+  background-image: url("/images/Untitled design.png?87d8b1f69a4b8c633b98a0f7d7ed4226");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchWrap .search {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.searchWrap .search h2, .searchWrap .search .h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.searchWrap .search .searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.searchWrap .search .searchBox .form-outline {
+  width: 80%;
+}
+.searchWrap .search .searchBox .form-outline input {
+  width: 100%;
+}
+
 /* Bootstrap */
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
