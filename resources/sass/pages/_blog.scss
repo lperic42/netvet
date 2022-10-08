@@ -2,6 +2,8 @@
     height: 200px;
     background-color:  rgb(164, 204, 239);
     background-image: url('../../images/Untitled design.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,4 +35,8 @@
             }
         }
     }
+}
+
+.blogsWrap {
+    min-height: 100vh;
 }

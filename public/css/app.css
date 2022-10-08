@@ -3474,6 +3474,8 @@ footer {
   height: 200px;
   background-color: rgb(164, 204, 239);
   background-image: url("/images/Untitled design.png?87d8b1f69a4b8c633b98a0f7d7ed4226");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3501,6 +3503,10 @@ footer {
 }
 .searchWrap .search .searchBox .form-outline input {
   width: 100%;
+}
+
+.blogsWrap {
+  min-height: 100vh;
 }
 
 .navigation-wrap {
