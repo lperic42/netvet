@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/blog', function () {
     return view('blog');
 });
+
+Route::get('/single', function () {
+    return view('single');
+});
