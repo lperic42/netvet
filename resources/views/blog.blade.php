@@ -28,13 +28,9 @@
                         </div>
                     </div>
                     <div class="row">
-
-                        <post></post>
-                        <post></post>
-                        <post></post>
-                        <post></post>
-                        <post></post>
-                        <post></post>
+                    @foreach($blogs as $blog)
+                        <post image="{{ $blog->featured_image }}" excerpt="{{ $blog->excerpt }}" url="{{ route('blogs.show', ['slug' => $blog->slug]) }}" title="{{ $blog->title }}" created_at="{{ $blog->created_at }}"></post>
+                    @endforeach
                     </div>
                 </div>
             </div>

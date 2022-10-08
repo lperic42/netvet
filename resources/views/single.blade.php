@@ -2,7 +2,6 @@
 <body>
     <div id="app">
         <navigation></navigation>
-
         <div class="single-post">
             <div class="single-post--heading">
                 <h1 style="overflow: hidden">{{ $post->title }}</h1>

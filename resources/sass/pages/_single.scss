@@ -16,7 +16,7 @@
             margin: 20px 0;
             font-family: $font-main;
             font-weight: 400;
-            font-size: 40px;
+            font-size: 30px;
             text-align: center;
         }
         img {
@@ -35,6 +35,19 @@
         align-items: center;
         justify-content: center;
 
+        p {
+            font-size: 16px;
+
+            a {
+                text-decoration: underline;
+                color: rgba(51, 90, 114, 0.91);
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    color: rgba(86, 148, 185, 0.91);
+                }
+            }
+        }
         .embedded_image {
             display: flex;
             flex-direction: column;
@@ -47,6 +60,40 @@
                 max-height: 500px;
                 object-fit: contain;
             }
+        }
+
+        blockquote{
+            font-size: 1em;
+            width:80%;
+            margin:50px auto;
+            font-style: italic;
+            color: #555555;
+            padding:1.2em 30px 1.2em 75px;
+            border-left:8px solid rgb(164, 204, 239);
+            line-height:1.6;
+            position: relative;
+            background:#EDEDED;
+        }
+
+        blockquote::before{
+            content: "\201C";
+            color:rgb(164, 204, 239);
+            font-size:4em;
+            position: absolute;
+            left: 10px;
+            top:-10px;
+        }
+
+        blockquote::after{
+            content: '';
+        }
+
+        blockquote em{
+            display:block;
+            color:#333333;
+            font-style: normal;
+            font-weight: 500;
+            margin-top:1em;
         }
     }
 }

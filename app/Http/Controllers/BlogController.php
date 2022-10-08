@@ -31,7 +31,7 @@ class BlogController extends Controller
     {
         $post = WinkPost::live()->whereSlug($slug)->firstOrFail();
 
-        return view('single-post', [
+        return view('single', [
             'post' => $post
         ]);
     }
