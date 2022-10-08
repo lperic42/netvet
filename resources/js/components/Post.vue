@@ -1,20 +1,20 @@
 <template>
     <div class="col-md-4 col-sm-6">
-        <a href="#">
-        <div class="blog-post">
-            <div class="blog-thumb">
-                <img src="images/animal-g6b6bd963e_1280.jpg" alt="" />
-            </div>
-            <div class="blog-content">
-                <div class="content-show">
-                    <h4><a href="#">Kako izmoriti psa na plaži?</a></h4>
-                    <span>29 Sep 2022</span>
+        <a :href="this.url" class="wrapper">
+            <div class="blog-post">
+                <div class="blog-thumb">
+                    <img :src="this.image" alt="" />
                 </div>
-                <div class="content-hide" id="hiddenContent">
-                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                <div class="blog-content">
+                    <div class="content-show">
+                        <h4><a href="#">{{ this.title }}</a></h4>
+                        <span>{{ this.created_at }}</span>
+                    </div>
+                    <div class="content-hide" id="hiddenContent">
+                        <p>{{ this.excerpt}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </a>
     </div>
 </template>
@@ -22,9 +22,22 @@
 <script>
 export default {
     name: "Post",
+    props: {
+        title: null,
+        url: null,
+        image: null,
+        created_at: null,
+        excerpt: null,
+    }
 }
 </script>
 
 <style scoped>
+.blog-thumb {
+    height: 235px;
+}
 
+.blog-thumb img {
+    height: 100%;
+}
 </style>

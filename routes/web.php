@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,16 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/blog', function () {
-    return view('blog');
-});
-
-Route::get('/single', function () {
-    return view('single');
-});
+Route::get('/', [Blogcontroller::class, 'index'])->name('homepage');
+Route::get('/blog', [Blogcontroller::class, 'list'])->name('blogs');
+Route::get('/{slug}', [Blogcontroller::class, 'show'])->name('blogs.show');
