@@ -6,7 +6,7 @@
             action=""
             @submit="handleSubmit"
             method="POST"
-            class="w-1/2 mx-auto mt-5"
+            class="mx-auto mt-5 contact-form"
         >
             <div class="mb-3 pt-0">
                 <input
@@ -179,3 +179,15 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+.contact-form {
+    width: 50%;
+}
+
+@media (max-width: 870px) {
+    .contact-form {
+        width: 100%;
+    }
+}
+</style>
