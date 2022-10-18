@@ -18,7 +18,7 @@
                     </p>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6" style="border-radius: 10px;">
+                    <div class="col-lg-6 image" style="border-radius: 10px;">
                         <img style="border-radius: 10px;" src="{{ asset('/images/happydog.jpeg') }}" alt="about" class="img-fluid" width="100%">
                     </div>
                     <div class="col-lg-6">

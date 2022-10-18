@@ -1,6 +1,7 @@
 .about {
     padding: 100px 0;
-    height: 90vh
+    min-height: 90vh;
+    height: auto;
 }
 
 .about .heading h2 {
@@ -69,5 +70,11 @@
             background-position: 0%;
             color: #fff;
         }
+    }
+}
+
+@media (max-width: 991px) {
+    .image {
+        margin-bottom: 30px;
     }
 }
