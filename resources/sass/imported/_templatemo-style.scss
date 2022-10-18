@@ -1163,8 +1163,12 @@ footer {
 }
 
 .bottom-footer {
-  text-align: left;
-  padding: 60px 0 15px 0;
+    text-align: left;
+    padding: 60px 0 15px 0;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 /*-- End Footer --*/

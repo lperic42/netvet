@@ -12,6 +12,10 @@ use App\Http\Controllers\BlogController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/o-nama', function() {
+    return view('about');
+});
 Route::get('/', [Blogcontroller::class, 'index'])->name('homepage');
 Route::get('/blog', [Blogcontroller::class, 'list'])->name('blogs');
 Route::get('/{slug}', [Blogcontroller::class, 'show'])->name('blogs.show');
+
