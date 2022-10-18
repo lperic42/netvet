@@ -2,7 +2,12 @@
 <body>
     <div id="app">
         <div>
-            <navigation></navigation>
+            <navigation
+                home_url="{{ route('homepage') }}"
+                about_url="{{ route('about') }}"
+                blog_url="{{ route('blogs') }}"
+                contact_url="{{ route('contact') }}"
+            ></navigation>
         </div>
 
         <section class="mb-10">

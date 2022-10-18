@@ -14,12 +14,12 @@ use App\Http\Controllers\BlogController;
 */
 Route::get('/o-nama', function() {
     return view('about');
-});
+})->name('about');
 
 Route::get('/kontakt', function() {
     return view('contact');
-});
-Route::post('/kontakt', [BlogController::class, 'sendEmail']);
+})->name('contact');
+Route::post('/kontakt', [BlogController::class, 'sendEmail'])->name('contact.post');
 
 Route::get('/', [Blogcontroller::class, 'index'])->name('homepage');
 Route::get('/blog', [Blogcontroller::class, 'list'])->name('blogs');

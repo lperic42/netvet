@@ -1,7 +1,12 @@
 @include('partials.header')
 <body>
     <div id="app">
-        <navigation></navigation>
+        <navigation
+            home_url="{{ route('homepage') }}"
+            about_url="{{ route('about') }}"
+            blog_url="{{ route('blogs') }}"
+            contact_url="{{ route('contact') }}"
+        ></navigation>
         <section class="about" id="about">
             <div class="container">
                 <div class="heading text-center">
@@ -31,21 +36,6 @@
                         </p>
                         <div class="cta">
                             <a href="#">Pročitaj naše savjete</a>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h4>
-                                    <i class="far fa-solid fa-paw"></i>Zdravlje</h4>
-                            </div>
-                            <div class="col-md-3">
-                                <h4>
-                                    <i class="far fa-solid fa-paw"></i>Prehrana</h4>
-
-                            </div>
-                            <div class="col-md-4">
-                                <h4>
-                                    <i class="far fa-solid fa-paw"></i>Igra</h4>
-                            </div>
                         </div>
                     </div>
                 </div>

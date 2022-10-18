@@ -3999,6 +3999,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Navigation",
+  props: {
+    about_url: null,
+    contact_url: null,
+    home_url: null,
+    blog_url: null
+  },
   data: function data() {
     return {
       mobileActive: false
@@ -84733,18 +84739,30 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "navigation-wrap" }, [
     _c("div", { staticClass: "navigation" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("a", { staticClass: "navigation--logo", attrs: { href: "#" } }, [
-        _c("img", {
-          attrs: {
-            src: "../../images/logo.png",
-            alt: "NetVet - Online veterinar",
-          },
-        }),
+      _c("div", { staticClass: "navigation--items" }, [
+        _c("a", { attrs: { href: this.about_url } }, [_vm._v("O nama")]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: this.blog_url } }, [_vm._v("Blog")]),
       ]),
       _vm._v(" "),
-      _vm._m(1),
+      _c(
+        "a",
+        { staticClass: "navigation--logo", attrs: { href: this.home_url } },
+        [
+          _c("img", {
+            attrs: {
+              src: "../../images/logo.png",
+              alt: "NetVet - Online veterinar",
+            },
+          }),
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "navigation--contact" }, [
+        _c("a", { attrs: { href: this.contact_url } }, [
+          _vm._v("Imaš pitanje?"),
+        ]),
+      ]),
       _vm._v(" "),
       _c(
         "div",
@@ -84765,35 +84783,18 @@ var render = function () {
           : "mobile-navigation",
       },
       [
-        _c("a", { attrs: { href: "#" } }, [_vm._v("O nama")]),
+        _c("a", { attrs: { href: this.about_url } }, [_vm._v("O nama")]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Blog")]),
+        _c("a", { attrs: { href: this.blog_url } }, [_vm._v("Blog")]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Imaš pitanje?")]),
+        _c("a", { attrs: { href: this.contact_url } }, [
+          _vm._v("Imaš pitanje?"),
+        ]),
       ]
     ),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "navigation--items" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("O nama")]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Blog")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "navigation--contact" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Imaš pitanje?")]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
