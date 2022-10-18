@@ -18,7 +18,6 @@
             </div>
         </div>
         <div :class="this.mobileActive ? 'mobile-navigation-active' : 'mobile-navigation'">
-            <a href="#">Početna</a>
             <a href="#">O nama</a>
             <a href="#">Blog</a>
             <a href="#">Imaš pitanje?</a>
@@ -31,7 +30,7 @@ export default {
     name: "Navigation",
     data() {
         return {
-            mobileActive: false,
+            mobileActive: true,
         };
     },
     methods: {
@@ -44,5 +43,25 @@ export default {
 </script>
 
 <style scoped>
-
+.navigation-wrap {
+    width: 100%;
+}
+.navigation {
+    width: 95%;
+    margin: 0 auto;
+}
+.mobile-navigation-active {
+    border-radius: 0 0 0 10px;
+}
+.mobile-navigation {
+    border-radius: 0 0 0 10px;
+}
+.mobile-navigation a {
+    text-decoration: none;
+    color: #000;
+}
+.mobile-navigation-active a {
+    text-decoration: none;
+    color: #000;
+}
 </style>

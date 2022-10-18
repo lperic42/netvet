@@ -1,7 +1,9 @@
 @include('partials.header')
 <body>
     <div id="app">
-        <navigation></navigation>
+        <div>
+            <navigation></navigation>
+        </div>
 
         <section class="mb-10">
             <div class="p-5 text-center bg-image" style="background-image: linear-gradient(to right,#b7b7b7 ,transparent 100%), url('../images/Untitled design.png'); height: 600px; background-size: cover; background-position: 50% 50%; background-color: rgba(0, 0, 0, 0);">
