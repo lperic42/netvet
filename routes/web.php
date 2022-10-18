@@ -15,6 +15,10 @@ use App\Http\Controllers\BlogController;
 Route::get('/o-nama', function() {
     return view('about');
 });
+
+Route::get('/kontakt', function() {
+    return view('contact');
+});
 Route::get('/', [Blogcontroller::class, 'index'])->name('homepage');
 Route::get('/blog', [Blogcontroller::class, 'list'])->name('blogs');
 Route::get('/{slug}', [Blogcontroller::class, 'show'])->name('blogs.show');
