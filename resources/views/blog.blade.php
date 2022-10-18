@@ -10,14 +10,15 @@
         <section class="searchWrap">
             <div class="search">
                 <h2>Znaš što tražiš?</h2>
-                <div class="searchBox">
+                <form class="searchBox" method="post" action="{{ route('blogs.search') }}">
+                    @csrf
                     <div class="form-outline">
-                        <input type="search" id="form1" class="form-control" placeholder="Upiši pojam..." />
+                        <input type="text" id="form1" class="form-control" name="query" placeholder="Upiši pojam..." />
                     </div>
-                    <button type="button" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary">
                         <i class="el-icon-search"></i>
                     </button>
-                </div>
+                </form>
             </div>
         </section>
 
@@ -32,9 +33,19 @@
                         </div>
                     </div>
                     <div class="row">
-                    @foreach($blogs as $blog)
-                        <post image="{{ $blog->featured_image }}" excerpt="{{ $blog->excerpt }}" url="{{ route('blogs.show', ['slug' => $blog->slug]) }}" title="{{ $blog->title }}" created_at="{{ $blog->created_at }}"></post>
-                    @endforeach
+                    @if(empty($blogs))
+                        @foreach($blogs as $blog)
+                            <post image="{{ $blog->featured_image }}"
+                                  excerpt="{{ $blog->excerpt }}"
+                                  url="{{ route('blogs.show', ['slug' => $blog->slug]) }}"
+                                  title="{{ $blog->title }}"
+                                  created_at="{{ $blog->created_at }}"></post>
+                        @endforeach
+                    @else
+                        <div style="height: 100%; display: flex; justify-content: center; align-items: center">
+                            <p style="font-size: 25px; font-weight: 200; color: rgba(47,47,47,0.51)"><i>Nismo mogli pronaći nijedan blog</i></p>
+                        </div>
+                    @endif
                     </div>
                 </div>
             </div>

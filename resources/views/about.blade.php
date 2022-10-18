@@ -35,7 +35,7 @@
                             Iza NetVet-a stoji mali tim doktora veterinarske medicine koji Vam stoje na usluzi.
                         </p>
                         <div class="cta">
-                            <a href="#">Pročitaj naše savjete</a>
+                            <a href="{{ route('blogs') }}">Pročitaj naše savjete</a>
                         </div>
                     </div>
                 </div>

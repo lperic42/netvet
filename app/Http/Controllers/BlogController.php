@@ -50,7 +50,9 @@ class BlogController extends Controller
             ->simplePaginate(9);
 
         // Return the search view with the resluts compacted
-        return view('blog', compact('blogs'));
+        return view('blog')->with([
+            'blogs' => $blogs,
+        ]);
     }
 
     public function sendEmail(Request $request) {

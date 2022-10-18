@@ -23,5 +23,6 @@ Route::post('/kontakt', [BlogController::class, 'sendEmail'])->name('contact.pos
 
 Route::get('/', [Blogcontroller::class, 'index'])->name('homepage');
 Route::get('/blog', [Blogcontroller::class, 'list'])->name('blogs');
+Route::post('/search', [Blogcontroller::class, 'search'])->name('blogs.search');
 Route::get('/{slug}', [Blogcontroller::class, 'show'])->name('blogs.show');
 
