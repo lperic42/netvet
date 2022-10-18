@@ -30,7 +30,7 @@ export default {
     name: "Navigation",
     data() {
         return {
-            mobileActive: true,
+            mobileActive: false,
         };
     },
     methods: {
