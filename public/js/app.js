@@ -84452,14 +84452,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-md-3 col-sm-6" }, [
               _c("div", { staticClass: "service-item" }, [
                 _c("div", { staticClass: "icon" }, [
-                  _c("i", { staticClass: "el-icon-tableware" }),
+                  _c("i", { staticClass: "far fa-solid fa-bone" }),
                 ]),
                 _vm._v(" "),
                 _c("h4", [_vm._v("Prehrana")]),
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu  sagittis vel diam in, malesuada malesuada risus. Aenean a sem leoneski."
+                    "Kako bi Vaš ljubimac živio dugo i zdravo, prehrana je od presudne važnosti. Redovito ćemo pisati o važnosti prehrane za životinje."
                   ),
                 ]),
               ]),
@@ -84468,14 +84468,17 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-md-3 col-sm-6" }, [
               _c("div", { staticClass: "service-item" }, [
                 _c("div", { staticClass: "icon" }, [
-                  _c("i", { staticClass: "el-icon-football" }),
+                  _c("i", {
+                    staticClass: "el-icon-football",
+                    staticStyle: { "font-weight": "800" },
+                  }),
                 ]),
                 _vm._v(" "),
                 _c("h4", [_vm._v("Igra")]),
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu  sagittis vel diam in, malesuada malesuada risus. Aenean a sem leoneski."
+                    "Svakodnevna tjelesna aktivnost i igra jamči zdravo tijelo Vaših kućnih ljubimaca."
                   ),
                 ]),
               ]),
@@ -84491,7 +84494,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu  sagittis vel diam in, malesuada malesuada risus. Aenean a sem leoneski."
+                    "Uzvraćajte ljubav svojim kućnim ljubimcima istom mjerom kojom oni pokazuju ljubav vama - neizmjerno."
                   ),
                 ]),
               ]),
