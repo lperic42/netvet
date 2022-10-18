@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Wink\WinkPost;
 
 class BlogController extends Controller
@@ -49,5 +51,15 @@ class BlogController extends Controller
 
         // Return the search view with the resluts compacted
         return view('blog', compact('blogs'));
+    }
+
+    public function sendEmail(Request $request) {
+        $data = $request->validate([
+            'email' => 'required|email',
+            'name' => 'required',
+            'message' => 'required',
+        ]);
+
+        Mail::to('test@test.com')->send(new ContactFormMail($data));
     }
 }

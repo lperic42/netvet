@@ -3734,6 +3734,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+//
+//
 //
 //
 //
@@ -3859,17 +3873,51 @@ __webpack_require__.r(__webpack_exports__);
   name: "Contact",
   data: function data() {
     return {
+      form: {
+        'name': null,
+        'email': null,
+        'message': null
+      },
       submitted: false,
       FORM_ENDPOINT: ''
     };
   },
   methods: {
-    handleSubmit: function handleSubmit() {
+    handleSubmit: function handleSubmit(e) {
       var _this = this;
 
-      setTimeout(function () {
-        _this.submitted = true;
-      }, 100);
+      e.preventDefault();
+      var item = [];
+      axios.post("/kontakt", {
+        'name': this.form.name,
+        'email': this.form.email,
+        'message': this.form.message
+      }).then(function (response) {
+        var data = response.data,
+            status = response.status;
+
+        if (status === 200) {
+          _this.submitted = true;
+        } else {
+          _this.loading = false;
+        }
+      })["catch"](function (e) {
+        var _e$response = e.response,
+            status = _e$response.status,
+            data = _e$response.data;
+
+        if (status === 422) {
+          for (var _i = 0, _Object$entries = Object.entries(data.errors); _i < _Object$entries.length; _i++) {
+            var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+                key = _Object$entries$_i[0],
+                value = _Object$entries$_i[1];
+
+            _this.errors[key] = data.errors[key][0] || null;
+          }
+        }
+
+        _this.loading = false;
+      });
     }
   },
   // To Add Tailwind
@@ -84507,17 +84555,96 @@ var render = function () {
       "form",
       {
         staticClass: "w-1/2 mx-auto mt-5",
-        attrs: { action: "#", method: "POST", target: "_blank" },
+        attrs: { action: "", method: "POST" },
         on: { submit: _vm.handleSubmit },
       },
       [
+        _c("div", { staticClass: "mb-3 pt-0" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.name,
+                expression: "form.name",
+              },
+            ],
+            staticClass:
+              "\n        px-3\n        py-3\n        placeholder-gray-400\n        text-gray-600\n        relative\n        bg-white bg-white\n        rounded\n        text-sm\n        border-0\n        shadow\n        outline-none\n        focus:outline-none\n        focus:ring\n        w-full\n      ",
+            attrs: {
+              type: "text",
+              placeholder: "Ime i prezime",
+              name: "name",
+              required: "",
+            },
+            domProps: { value: _vm.form.name },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "name", $event.target.value)
+              },
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-3 pt-0" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.email,
+                expression: "form.email",
+              },
+            ],
+            staticClass:
+              "\n        px-3\n        py-3\n        placeholder-gray-400\n        text-gray-600\n        relative\n        bg-white bg-white\n        rounded\n        text-sm\n        border-0\n        shadow\n        outline-none\n        focus:outline-none\n        focus:ring\n        w-full\n      ",
+            attrs: {
+              type: "email",
+              placeholder: "Vaš E-mail",
+              name: "email",
+              required: "",
+            },
+            domProps: { value: _vm.form.email },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "email", $event.target.value)
+              },
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-3 pt-0" }, [
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.message,
+                expression: "form.message",
+              },
+            ],
+            staticClass:
+              "\n        px-3\n        py-3\n        placeholder-gray-400\n        text-gray-600\n        relative\n        bg-white bg-white\n        rounded\n        text-sm\n        border-0\n        shadow\n        outline-none\n        focus:outline-none\n        focus:ring\n        w-full\n      ",
+            attrs: { placeholder: "Poruka", name: "message", required: "" },
+            domProps: { value: _vm.form.message },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "message", $event.target.value)
+              },
+            },
+          }),
+        ]),
+        _vm._v(" "),
         _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
-        _vm._m(3),
       ]
     ),
     _vm._v(" "),
@@ -84526,59 +84653,13 @@ var render = function () {
           _c("h2", { staticClass: "text-2xl" }, [_vm._v("Hvala na upitu!")]),
           _vm._v(" "),
           _c("div", { staticClass: "text-md" }, [
-            _vm._v("Odgovorit ćemo Vam u najkražem roku."),
+            _vm._v("Odgovorit ćemo Vam u najkraćem roku."),
           ]),
         ])
       : _vm._e(),
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-3 pt-0" }, [
-      _c("input", {
-        staticClass:
-          "\n        px-3\n        py-3\n        placeholder-gray-400\n        text-gray-600\n        relative\n        bg-white bg-white\n        rounded\n        text-sm\n        border-0\n        shadow\n        outline-none\n        focus:outline-none\n        focus:ring\n        w-full\n      ",
-        attrs: {
-          type: "text",
-          placeholder: "Ime i prezime",
-          name: "name",
-          required: "",
-        },
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-3 pt-0" }, [
-      _c("input", {
-        staticClass:
-          "\n        px-3\n        py-3\n        placeholder-gray-400\n        text-gray-600\n        relative\n        bg-white bg-white\n        rounded\n        text-sm\n        border-0\n        shadow\n        outline-none\n        focus:outline-none\n        focus:ring\n        w-full\n      ",
-        attrs: {
-          type: "email",
-          placeholder: "Vaš E-mail",
-          name: "email",
-          required: "",
-        },
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-3 pt-0" }, [
-      _c("textarea", {
-        staticClass:
-          "\n        px-3\n        py-3\n        placeholder-gray-400\n        text-gray-600\n        relative\n        bg-white bg-white\n        rounded\n        text-sm\n        border-0\n        shadow\n        outline-none\n        focus:outline-none\n        focus:ring\n        w-full\n      ",
-        attrs: { placeholder: "Poruka", name: "message", required: "" },
-      }),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement

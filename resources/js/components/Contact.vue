@@ -3,10 +3,9 @@
         <h2 style="text-align: center; font-size: 25px; font-weight: 500; margin-bottom: 20px;">Imaš pitanje?</h2>
         <p style="text-align: center; font-size:16px;">Stručna osoba iz našeg tima odgovorit će ti u najkraćem roku!</p>
         <form
-            action="#"
+            action=""
             @submit="handleSubmit"
             method="POST"
-            target="_blank"
             class="w-1/2 mx-auto mt-5"
         >
             <div class="mb-3 pt-0">
@@ -14,6 +13,7 @@
                     type="text"
                     placeholder="Ime i prezime"
                     name="name"
+                    v-model="form.name"
                     class="
             px-3
             py-3
@@ -39,6 +39,7 @@
                     type="email"
                     placeholder="Vaš E-mail"
                     name="email"
+                    v-model="form.email"
                     class="
             px-3
             py-3
@@ -63,6 +64,7 @@
         <textarea
             placeholder="Poruka"
             name="message"
+            v-model="form.message"
             class="
             px-3
             py-3
@@ -114,7 +116,7 @@
 
         <div v-if="submitted" class="text-center mt-10">
             <h2 class="text-2xl">Hvala na upitu!</h2>
-            <div class="text-md">Odgovorit ćemo Vam u najkražem roku.</div>
+            <div class="text-md">Odgovorit ćemo Vam u najkraćem roku.</div>
         </div>
     </div>
 </template>
@@ -123,16 +125,45 @@
 export default {
     name: "Contact",
     data: () => ({
+        form: {
+            'name': null,
+            'email': null,
+            'message': null,
+        },
         submitted: false,
         FORM_ENDPOINT: '',
     }),
 
     methods: {
-        handleSubmit() {
-            setTimeout(() => {
-                this.submitted = true;
-            }, 100);
-        },
+        handleSubmit(e) {
+            e.preventDefault();
+
+            let item = [
+
+            ]
+            axios.post(`/kontakt`, {
+                'name': this.form.name,
+                'email': this.form.email,
+                'message': this.form.message
+            }).then((response) => {
+                const {data, status} = response;
+                if (status === 200) {
+                    this.submitted = true;
+                } else {
+                    this.loading = false;
+                }
+            }).catch((e) => {
+                const {status, data} = e.response;
+
+                if (status === 422) {
+                    for (const [key, value] of Object.entries(data.errors)) {
+                        this.errors[key] = data.errors[key][0] || null;
+                    }
+                }
+
+                this.loading = false;
+            })
+        }
     },
 
     // To Add Tailwind

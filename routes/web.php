@@ -19,6 +19,8 @@ Route::get('/o-nama', function() {
 Route::get('/kontakt', function() {
     return view('contact');
 });
+Route::post('/kontakt', [BlogController::class, 'sendEmail']);
+
 Route::get('/', [Blogcontroller::class, 'index'])->name('homepage');
 Route::get('/blog', [Blogcontroller::class, 'list'])->name('blogs');
 Route::get('/{slug}', [Blogcontroller::class, 'show'])->name('blogs.show');
