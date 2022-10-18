@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="row">
-                    @if(empty($blogs))
+                    @if(count($blogs) > 0)
                         @foreach($blogs as $blog)
                             <post image="{{ $blog->featured_image }}"
                                   excerpt="{{ $blog->excerpt }}"
