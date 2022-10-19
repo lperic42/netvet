@@ -19,6 +19,11 @@ Route::get('/o-nama', function() {
 Route::get('/kontakt', function() {
     return view('contact');
 })->name('contact');
+
+Route::get('/hvala', function() {
+    return view('thank-you');
+})->name('thank-you');
+
 Route::post('/kontakt', [BlogController::class, 'sendEmail'])->name('contact.post');
 
 Route::get('/', [Blogcontroller::class, 'index'])->name('homepage');
