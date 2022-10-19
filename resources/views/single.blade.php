@@ -28,7 +28,7 @@
                           excerpt="{{ $relatedPost->excerpt }}"
                           url="{{ route('blogs.show', ['slug' => $relatedPost->slug]) }}"
                           title="{{ $relatedPost->title }}"
-                          created_at="{{ $relatedPost->created_at }}"></post>
+                          created_at="{{ $blog->created_at->format('d.m.Y') }}"></post>
                 @endforeach
             </div>
 

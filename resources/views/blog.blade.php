@@ -39,7 +39,7 @@
                                   excerpt="{{ $blog->excerpt }}"
                                   url="{{ route('blogs.show', ['slug' => $blog->slug]) }}"
                                   title="{{ $blog->title }}"
-                                  created_at="{{ $blog->created_at }}"></post>
+                                  created_at="{{ $blog->created_at->format('d.m.Y') }}"></post>
                         @endforeach
                     @else
                         <div style="height: 100%; display: flex; justify-content: center; align-items: center">

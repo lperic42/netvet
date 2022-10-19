@@ -52,7 +52,7 @@
                 <div class="row">
 
                     @foreach($featuredBlogs as $blog)
-                        <post image="{{ $blog->featured_image }}" excerpt="{{ $blog->excerpt }}" url="{{ route('blogs.show', ['slug' => $blog->slug]) }}" title="{{ $blog->title }}" created_at="{{ $blog->created_at }}"></post>
+                        <post image="{{ $blog->featured_image }}" excerpt="{{ $blog->excerpt }}" url="{{ route('blogs.show', ['slug' => $blog->slug]) }}" title="{{ $blog->title }}" created_at="{{ $blog->created_at->format('d.m.Y') }}"></post>
                     @endforeach
                 </div>
             </div>
