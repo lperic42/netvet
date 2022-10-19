@@ -87,6 +87,7 @@
 
             <div class="mb-3 pt-0">
                 <button
+                    v-if="!this.submitted"
                     class="
             bg-blue-500
             text-white
@@ -111,13 +112,37 @@
                 >
                     Pošalji
                 </button>
+                <button
+                    v-if="this.submitted"
+                    class="
+            bg-blue-500
+            text-white
+            active:bg-blue-600
+            font-bold
+            uppercase
+            text-sm
+            px-6
+            py-3
+            rounded
+            shadow
+            hover:shadow-lg
+            outline-none
+            focus:outline-none
+            mr-1
+            mb-1
+            ease-linear
+            transition-all
+            duration-150
+          "
+                    style="opacity: .5; user-select: none; cursor: wait"
+                    type="submit"
+                >
+                    Pošalji
+                </button>
             </div>
         </form>
 
-        <div v-if="submitted" class="text-center mt-10">
-            <h2 class="text-2xl">Hvala na upitu!</h2>
-            <div class="text-md">Odgovorit ćemo Vam u najkraćem roku.</div>
-        </div>
+
     </div>
 </template>
 
@@ -138,9 +163,8 @@ export default {
         handleSubmit(e) {
             e.preventDefault();
 
-            let item = [
+            this.submitted = true;
 
-            ]
             axios.post(`/kontakt`, {
                 'name': this.form.name,
                 'email': this.form.email,
@@ -148,7 +172,7 @@ export default {
             }).then((response) => {
                 const {data, status} = response;
                 if (status === 200) {
-                    this.submitted = true;
+                    window.location.replace("/hvala");
                 } else {
                     this.loading = false;
                 }
