@@ -22,13 +22,16 @@
             <div style="width: 100%; margin-bottom: 30px;">
                 <h3 style="text-align: center">Možda bi te moglo zanimati</h3>
             </div>
-            @foreach($relatedPosts as $relatedPost)
-                <post image="{{ $relatedPost->featured_image }}"
-                      excerpt="{{ $relatedPost->excerpt }}"
-                      url="{{ route('blogs.show', ['slug' => $relatedPost->slug]) }}"
-                      title="{{ $relatedPost->title }}"
-                      created_at="{{ $relatedPost->created_at }}"></post>
-            @endforeach
+            <div class="row">
+                @foreach($relatedPosts as $relatedPost)
+                    <post image="{{ $relatedPost->featured_image }}"
+                          excerpt="{{ $relatedPost->excerpt }}"
+                          url="{{ route('blogs.show', ['slug' => $relatedPost->slug]) }}"
+                          title="{{ $relatedPost->title }}"
+                          created_at="{{ $relatedPost->created_at }}"></post>
+                @endforeach
+            </div>
+
         </div>
 
 @include('partials.footer')

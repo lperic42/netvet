@@ -101,6 +101,9 @@
 
 @media(max-width: 640px) {
     .single-post{
+        &--heading {
+            width: 100%;
+        }
         &--body {
             blockquote {
                 font-size: 13px;

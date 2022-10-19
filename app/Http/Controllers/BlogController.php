@@ -32,7 +32,7 @@ class BlogController extends Controller
     public function show($slug)
     {
         $post = WinkPost::live()->whereSlug($slug)->firstOrFail();
-        if(!empty($post->tags)) {
+        if(count($post->tags)) {
             $relatedPosts = WinkPost::live()->whereHas('tags', function ($q) use ($post) {
                 $q->whereIn('name', $post->tags->pluck('name'));
             })->where('slug', '!=', $slug)->get();
