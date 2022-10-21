@@ -12,6 +12,7 @@ use App\Http\Controllers\BlogController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/o-nama', function() {
     return view('about');
 })->name('about');
@@ -29,5 +30,6 @@ Route::post('/kontakt', [BlogController::class, 'sendEmail'])->name('contact.pos
 Route::get('/', [Blogcontroller::class, 'index'])->name('homepage');
 Route::get('/blog', [Blogcontroller::class, 'list'])->name('blogs');
 Route::post('/search', [Blogcontroller::class, 'search'])->name('blogs.search');
+Route::get('/sitemap.xml', [Blogcontroller::class, 'sitemap'])->name('sitemap');
 Route::get('/{slug}', [Blogcontroller::class, 'show'])->name('blogs.show');
 

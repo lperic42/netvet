@@ -32,6 +32,7 @@ class BlogController extends Controller
     public function show($slug)
     {
         $post = WinkPost::live()->whereSlug($slug)->firstOrFail();
+
         if(count($post->tags)) {
             $relatedPosts = WinkPost::live()->whereHas('tags', function ($q) use ($post) {
                 $q->whereIn('name', $post->tags->pluck('name'));
@@ -39,6 +40,7 @@ class BlogController extends Controller
         } else {
             $relatedPosts = WinkPost::live()->where('slug', '!=', $slug)->limit(3)->get();
         }
+
         return view('single', [
             'post' => $post,
             'relatedPosts' => $relatedPosts,
@@ -70,5 +72,13 @@ class BlogController extends Controller
         ]);
 
         Mail::to('test@test.com')->send(new ContactFormMail($data));
+    }
+
+    public function sitemap() {
+        $blogs = WinkPost::live()->get();
+
+        return response()->view('sitemap', [
+            'blogs' => $blogs
+        ])->header('Content-Type', 'text/xml');
     }
 }
