@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Wink\WinkPost;
 
@@ -28,6 +29,7 @@ class BlogController extends Controller
             'blogs' => $blogs,
         ]);
     }
+
 
     public function show($slug)
     {
@@ -58,11 +60,11 @@ class BlogController extends Controller
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(9);
 
-        // Return the search view with the resluts compacted
         return view('blog')->with([
             'blogs' => $blogs,
         ]);
     }
+
 
     public function sendEmail(Request $request) {
         $data = $request->validate([
@@ -71,7 +73,7 @@ class BlogController extends Controller
             'message' => 'required',
         ]);
 
-        Mail::to('test@test.com')->send(new ContactFormMail($data));
+        Mail::to('info@netvet.com.hr')->send(new ContactFormMail($data));
     }
 
     public function sitemap() {
