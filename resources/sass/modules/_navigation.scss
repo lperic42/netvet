@@ -37,6 +37,7 @@
         }
 
         &--logo {
+            margin-left: -100px;
             img {
                 width: 75px;
                 height: 75px;
@@ -117,6 +118,10 @@
         .navigation {
             &--items {
                 display: none;
+            }
+
+            &--logo {
+                margin-left: 0;
             }
 
             &--contact {

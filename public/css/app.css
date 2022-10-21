@@ -36,6 +36,9 @@
 .navigation-wrap .navigation--items a:hover {
   color: #a4ccef;
 }
+.navigation-wrap .navigation--logo {
+  margin-left: -100px;
+}
 .navigation-wrap .navigation--logo img {
   width: 75px;
   height: 75px;
@@ -103,11 +106,80 @@
   .navigation-wrap .navigation--items {
     display: none;
   }
+  .navigation-wrap .navigation--logo {
+    margin-left: 0;
+  }
   .navigation-wrap .navigation--contact {
     display: none;
   }
   .navigation-wrap .navigation .hamburger {
     display: flex;
+  }
+}
+.mainbox {
+  background-color: #F7FAFC;
+  margin: auto;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.err {
+  color: rgb(57, 159, 252);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 11rem;
+}
+
+.lead {
+  font-size: 40px;
+}
+
+.far {
+  font-size: 8.5rem;
+  color: rgb(57, 159, 252);
+}
+
+.err2 {
+  color: rgb(57, 159, 252);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 11rem;
+}
+
+.msg {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.6rem;
+  width: 75%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(57, 159, 252);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 620px) {
+  .err {
+    color: rgb(57, 159, 252);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 8rem;
+  }
+  .far {
+    font-size: 6rem;
+    color: rgb(57, 159, 252);
+  }
+  .err2 {
+    color: rgb(57, 159, 252);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 8rem;
+  }
+  .lead {
+    font-size: 20px;
   }
 }
 /*!

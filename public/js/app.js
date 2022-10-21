@@ -4114,7 +4114,7 @@ var render = function render() {
     }
   }, [_c("img", {
     attrs: {
-      src: "../../images/logo.png",
+      src: "../../images/netvet-logo.png",
       alt: "NetVet - Online veterinar"
     }
   })]), _vm._v(" "), _c("div", {
