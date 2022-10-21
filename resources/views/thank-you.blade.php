@@ -1,12 +1,4 @@
 @include('partials.header')
-<body>
-    <div id="app">
-        <navigation
-            home_url="{{ route('homepage') }}"
-            about_url="{{ route('about') }}"
-            blog_url="{{ route('blogs') }}"
-            contact_url="{{ route('contact') }}"
-        ></navigation>
 
         <div class="jumbotron text-center" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <h1 class="display-3">Hvala na upitu!</h1>

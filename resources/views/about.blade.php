@@ -1,12 +1,5 @@
 @include('partials.header')
-<body>
-    <div id="app">
-        <navigation
-            home_url="{{ route('homepage') }}"
-            about_url="{{ route('about') }}"
-            blog_url="{{ route('blogs') }}"
-            contact_url="{{ route('contact') }}"
-        ></navigation>
+
         <section class="about" id="about">
             <div class="container">
                 <div class="heading text-center">
