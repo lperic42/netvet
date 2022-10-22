@@ -73,7 +73,7 @@ class BlogController extends Controller
             'message' => 'required',
         ]);
 
-        Mail::to('info@netvet.com.hr')->send(new ContactFormMail($data));
+        Mail::to(env('ADMIN_MAIL'))->send(new ContactFormMail($data));
     }
 
     public function sitemap() {

@@ -38,9 +38,11 @@
 
         &--logo {
             margin-left: -100px;
+            margin-top: 5px;
+            filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(26%) contrast(104%);
             img {
-                width: 75px;
-                height: 75px;
+                width: 60px;
+                height: 60px;
             }
         }
 

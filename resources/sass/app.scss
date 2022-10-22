@@ -23,6 +23,12 @@
 /* Bootstrap */
 @import '~bootstrap/scss/bootstrap';
 
+@font-face {
+    font-family: "Robaga";
+    src: url("./fonts/robaga_rounded/Robaga Rounded Light.otf");
+    src: url("./fonts/robaga_rounded/Robaga Rounded Light.otf") format("opentype");
+}
+
 
 * {
     margin: 0;

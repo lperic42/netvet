@@ -6,7 +6,7 @@
                 <a :href="this.blog_url">Blog</a>
             </div>
             <a :href="this.home_url" class="navigation--logo">
-                <img :src="'../../images/netvet-logo.png'" alt="NetVet - Online veterinar">
+                <img :src="'../../images/logo-without-label.svg'" alt="NetVet - Online veterinar">
             </a>
             <div class="navigation--contact">
                 <a :href="this.contact_url">Imaš pitanje?</a>

@@ -51,6 +51,40 @@
         }
     }
 
+.mainWrapperForLogo {
+    display: flex;
+    justify-content: flex-end;
+    font-family: "Robaga";
+}
+
+    .logocontainer {
+        position: absolute;
+        left: 15%;
+        width: 300px;
+
+        .logoholder {
+            height: 300px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .moto {
+            h1 {
+                font-size: 23px
+            }
+        }
+    }
+    .parts {
+        opacity: .3;
+        overflow: hidden;
+
+        img {
+            height: 400px;
+        }
+    }
+
 .section-about {
     min-height: 200px;
     border-bottom: 1px solid #A4CCEFFF;
@@ -144,6 +178,87 @@
     }
 }
 
+@media(max-width: 1700px) {
+    .logocontainer {
+        position: absolute;
+        left: 15%;
+        top: 25%;
+
+        .logoholder {
+            height: 200px;
+        }
+    }
+    .parts {
+        opacity: .3;
+        overflow: hidden;
+
+        img {
+            height: 350px;
+        }
+    }
+}
+
+@media(max-width: 1400px) {
+    .logocontainer {
+        .logoholder {
+            height: 200px;
+        }
+    }
+    .parts {
+        opacity: .3;
+        overflow: hidden;
+
+        img {
+            height: 280px;
+        }
+    }
+}
+
+@media(max-width: 1100px) {
+    .logocontainer {
+        .logoholder {
+        }
+    }
+    .parts {
+        opacity: .3;
+        overflow: hidden;
+
+        img {
+            height: 230px;
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    .logocontainer {
+        .logoholder {
+        }
+    }
+    .parts {
+        opacity: .1;
+
+        img {
+            height: 330px;
+            margin-right: -50%;
+        }
+    }
+}
+
+
+@media(max-width: 600px) {
+    .mainWrapperForLogo {
+        justify-content: center;
+    }
+    .logocontainer {
+        position: static;
+        .logoholder {
+        }
+    }
+    .parts {
+        display: none;
+    }
+}
+
 @media(max-width: 540px) {
     .section-hero {
         .hero {
@@ -197,6 +312,14 @@
                 a {
                     font-size: 18px;
                 }
+            }
+        }
+    }
+    .logocontainer {
+        position: static;
+        .moto {
+            h1 {
+                font-size: 16px;
             }
         }
     }

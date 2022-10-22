@@ -1,20 +1,20 @@
 @include('partials.header')
         <section class="mb-10">
-            <div class="p-5 text-center bg-image" style="background-image: linear-gradient(to right,#b7b7b7 ,transparent 100%), url('../images/Untitled design.png'); height: 600px; background-size: cover; background-position: 50% 50%; background-color: rgba(0, 0, 0, 0);">
-                <div class="mask" style="background-color: rgba(126,126,126,0.35)">
-                    <div class="d-flex justify-content-center align-items-center h-100">
-                        <div class="row d-flex justify-content-center">
-                            <div class="text-container">
-                                <div class="text-black">
-                                    <h2 class="mb-4 px-4 px-md-5 display-3 ls-tight">
-                                        <span>Veterinar koji je dostupan</span>
-                                        <br>
-                                        <span>u svakom trenutku!</span>
-
-                                    </h2>
-                                        <div class="cta">
-                                            <a href="{{ route('blogs') }}">Pročitaj naše savjete</a>
-                                        </div>
+            <div class="p-5 text-center bg-image" style="background: linear-gradient(90deg, rgba(39,108,172,1) 0%, rgba(137,196,249,1) 100%, rgba(83,168,242,1) 100%);; height: 600px; background-size: cover;">
+                <div class="mask" style="">
+                    <div class="d-flex align-items-center h-100" style="justify-content: space-between">
+                        <div class="row d-flex" style="width: 90%; margin: 0 auto;">
+                            <div class="text-container mainWrapperForLogo" style="">
+                                <div class="text-black logocontainer">
+                                    <div style="opacity: .9;" class="logoholder">
+                                        <img src="images/logo-with-label.svg" alt="">
+                                    </div>
+                                    <div style="color: #fff; font-size: 30px;" class="moto">
+                                        <h1 style="">Veterinar koji je dostupan <br> u svakom trenutku!</h1>
+                                    </div>
+                                </div>
+                                <div style="" class="parts">
+                                    <img src="images/parts.svg" alt="">
                                 </div>
                             </div>
                         </div>
