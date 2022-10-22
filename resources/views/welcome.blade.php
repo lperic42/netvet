@@ -6,15 +6,15 @@
                         <div class="row d-flex" style="width: 90%; margin: 0 auto;">
                             <div class="text-container mainWrapperForLogo" style="">
                                 <div class="text-black logocontainer">
-                                    <div style="opacity: .9;" class="logoholder">
-                                        <img src="images/logo-with-label.svg" alt="">
+                                    <div style="opacity: .9; margin-bottom: 20px;" class="logoholder">
+                                        <img src="images/netvet-logo-with-font.svg" alt="NetVet logo - veterinar koji je prisutan u svakom trenutku">
                                     </div>
                                     <div style="color: #fff; font-size: 30px;" class="moto">
                                         <h1 style="">Veterinar koji je dostupan <br> u svakom trenutku!</h1>
                                     </div>
                                 </div>
                                 <div style="" class="parts">
-                                    <img src="images/parts.svg" alt="">
+                                    <img src="images/parts.svg" alt="Simboli koji prikazuju životinjske navike">
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                     <div class="col-md-12">
                         <div class="heading-section">
                             <h2>Zadnji blogovi</h2>
-                            <img src="images/sectionbreak2.png" alt="" >
+                            <img src="images/sectionbreak2.png" alt="Slika koja dijeli dvije sekcije stranice" >
                         </div>
                     </div>
                 </div>
