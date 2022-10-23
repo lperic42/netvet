@@ -6,7 +6,7 @@
 .single-post {
     &--heading {
         width: 80%;
-        margin: 0 auto 40px auto;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -27,6 +27,7 @@
     }
 
     &--body {
+        font-family: $font-tertiary;
         width: 100%;
         margin: 0 auto;
         font-size: 18px;
@@ -62,8 +63,21 @@
             }
         }
 
+        h2 {
+            font-size: 25px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        ul li {
+            font-size: 16px;
+        }
+
         blockquote{
-            font-size: .8em;
+            font-size: 1em;
+            font-weight: 600;
             width:80%;
             margin:50px auto;
             font-style: italic;
@@ -106,7 +120,7 @@
         }
         &--body {
             blockquote {
-                font-size: 13px;
+                font-size: 16px;
                 width: 100%;
                 padding: 1.2em 10px 1.2em 35px;
             }
