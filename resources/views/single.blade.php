@@ -6,7 +6,7 @@
                 <img src="{{ $post->featured_image }}">
             </div>
             <div class="single-post--body">
-                <div style="width: 80%; margin: 0 auto"> {!! $post->body !!} </div>
+                <div style="width: 80%; margin: 0 auto; color: #000;"> {!! $post->body !!} </div>
             </div>
         </div>
 
