@@ -81,7 +81,6 @@ class BlogController extends Controller
             'blogs' => $blogs,
             'metaTitle' => $metaTitle,
             'metaDescription' => $metaDescription
-
         ]);
     }
 
