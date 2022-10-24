@@ -13,9 +13,13 @@ class BlogController extends Controller
     public function index() {
         // TODO -- Limit to 6 blog posts
         $featuredBlogs = WinkPost::live()->limit(6)->get();
+        $metaTitle = config('metadata.title.home');
+        $metaDescription = config('metadata.description.home');
 
         return view('welcome')->with([
             'featuredBlogs' => $featuredBlogs,
+            'metaTitle' => $metaTitle,
+            'metaDescription' => $metaDescription
         ]);
     }
 
@@ -25,8 +29,14 @@ class BlogController extends Controller
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(9);
 
+        $metaTitle = config('metadata.title.blog');
+        $metaDescription = config('metadata.description.blog');
+
         return view('blog')->with([
             'blogs' => $blogs,
+            'metaTitle' => $metaTitle,
+            'metaDescription' => $metaDescription
+
         ]);
     }
 
@@ -42,10 +52,14 @@ class BlogController extends Controller
         } else {
             $relatedPosts = WinkPost::live()->where('slug', '!=', $slug)->limit(3)->get();
         }
+        $metaTitle = $post->title;
+        $metaDescription = $post->meta['meta_description'];
 
         return view('single', [
             'post' => $post,
             'relatedPosts' => $relatedPosts,
+            'metaTitle' => $metaTitle,
+            'metaDescription' => $metaDescription
         ]);
     }
 
@@ -60,8 +74,14 @@ class BlogController extends Controller
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(9);
 
+        $metaTitle = config('metadata.title.blog');
+        $metaDescription = config('metadata.description.blog');
+
         return view('blog')->with([
             'blogs' => $blogs,
+            'metaTitle' => $metaTitle,
+            'metaDescription' => $metaDescription
+
         ]);
     }
 
@@ -79,8 +99,14 @@ class BlogController extends Controller
     public function sitemap() {
         $blogs = WinkPost::live()->get();
 
+        $metaTitle = config('metadata.title.home');
+        $metaDescription = config('metadata.description.home');
+
         return response()->view('sitemap', [
-            'blogs' => $blogs
+            'blogs' => $blogs,
+            'metaTitle' => $metaTitle,
+            'metaDescription' => $metaDescription
+
         ])->header('Content-Type', 'text/xml');
     }
 }

@@ -14,11 +14,23 @@ use App\Http\Controllers\BlogController;
 */
 
 Route::get('/o-nama', function() {
-    return view('about');
+    $metaTitle = config('metadata.title.about');
+    $metaDescription = config('metadata.description.about');
+
+    return view('about')->with([
+        'metaTitle' => $metaTitle,
+        'metaDescription' => $metaDescription
+    ]);
 })->name('about');
 
 Route::get('/kontakt', function() {
-    return view('contact');
+    $metaTitle = config('metadata.title.contact');
+    $metaDescription = config('metadata.description.contact');
+
+    return view('contact')->with([
+        'metaTitle' => $metaTitle,
+        'metaDescription' => $metaDescription
+    ]);
 })->name('contact');
 
 Route::get('/hvala', function() {
