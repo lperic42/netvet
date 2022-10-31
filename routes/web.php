@@ -34,7 +34,13 @@ Route::get('/kontakt', function() {
 })->name('contact');
 
 Route::get('/hvala', function() {
-    return view('thank-you');
+    $metaTitle = config('metadata.title.contact');
+    $metaDescription = config('metadata.description.contact');
+
+    return view('thank-you')->with([
+        'metaTitle' => $metaTitle,
+        'metaDescription' => $metaDescription]);
+
 })->name('thank-you');
 
 Route::post('/kontakt', [BlogController::class, 'sendEmail'])->name('contact.post');
