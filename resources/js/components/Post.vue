@@ -7,7 +7,7 @@
                 </div>
                 <div class="blog-content">
                     <div class="content-show">
-                        <h4><a href="#">{{ this.title }}</a></h4>
+                        <h4><a :href="this.url">{{ this.title }}</a></h4>
                         <span>{{ this.created_at }}</span>
                     </div>
                     <div class="content-hide" id="hiddenContent">

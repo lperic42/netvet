@@ -27,7 +27,7 @@
                         <p>
                             Iza NetVet-a stoji mali tim doktora veterinarske medicine koji Vam stoje na usluzi.
                         </p>
-                        <div class="cta">
+                        <div class="cta" style="font-family: 'Arial Unicode MS', sans-serif;font-size: 12px; letter-spacing: 1px">
                             <a href="{{ route('blogs') }}">Pročitaj naše savjete</a>
                         </div>
                     </div>
