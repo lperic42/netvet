@@ -12,7 +12,7 @@ class BlogController extends Controller
 {
     public function index() {
         // TODO -- Limit to 6 blog posts
-        $featuredBlogs = WinkPost::live()->limit(6)->get();
+        $featuredBlogs = WinkPost::live()->orderBy('publish_date', 'DESC')->limit(6)->get();
         $metaTitle = config('metadata.title.home');
         $metaDescription = config('metadata.description.home');
 
