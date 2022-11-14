@@ -40,3 +40,25 @@
 .blogsWrap {
     min-height: 100vh;
 }
+
+.pagination-links {
+    //max-width: 80%;
+    min-width: 30%;
+    margin: 100px auto 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        width: 200px;
+    }
+
+    .disabled {
+        color: #718096 !important;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}
