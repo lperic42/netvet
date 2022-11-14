@@ -1,6 +1,6 @@
 @include('partials.header')
 
-        <div class="single-post">
+        <main class="single-post">
             <div class="single-post--heading">
                 <h1 style="overflow: hidden">{{ $post->title }}</h1>
                 <img src="{{ $post->featured_image }}">
@@ -8,7 +8,7 @@
             <div class="single-post--body">
                 <div style="width: 80%; margin: 0 auto; color: #000;"> {!! $post->body !!} </div>
             </div>
-        </div>
+        </main>
 
         <div class="related-posts" style="width: 80%; margin: 0 auto 40px auto;">
             <div style="height: 1px; width: 100%; background-color: rgb(57, 159, 252); margin-bottom: 30px;"></div>
