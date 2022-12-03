@@ -23,11 +23,39 @@ class BlogController extends Controller
         ]);
     }
 
-    public function list() {
-        $blogs = WinkPost::with('tags')
-            ->live()
-            ->orderBy('publish_date', 'DESC')
-            ->simplePaginate(9);
+    public function list(Request $request) {
+        if($request->has('filter')) {
+            if($request->filter == 'cats') {
+                $blogs = WinkPost::with('tags')
+                    ->live()
+                    ->whereHas('tags', function($query) {
+                        $query->where('name', 'Mačke')
+                            ->orWhere('name', 'macke')
+                            ->orWhere('name', 'mačke');
+                    })
+                    ->orderBy('publish_date', 'DESC')
+                    ->simplePaginate(9);
+            } elseif ($request->filter == 'dogs') {
+                $blogs = WinkPost::with('tags')
+                    ->live()
+                    ->whereHas('tags', function($query) {
+                        $query->where('name', 'Psi')
+                            ->orWhere('name', 'psi');
+                    })
+                    ->orderBy('publish_date', 'DESC')
+                    ->simplePaginate(9);
+            } else {
+                $blogs = WinkPost::with('tags')
+                    ->live()
+                    ->orderBy('publish_date', 'DESC')
+                    ->simplePaginate(9);
+            }
+        } else {
+            $blogs = WinkPost::with('tags')
+                ->live()
+                ->orderBy('publish_date', 'DESC')
+                ->simplePaginate(9);
+        }
 
         $metaTitle = config('metadata.title.blog');
         $metaDescription = config('metadata.description.blog');
