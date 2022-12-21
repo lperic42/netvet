@@ -82,12 +82,15 @@ class BlogController extends Controller
         }
         $metaTitle = $post->title;
         $metaDescription = $post->meta['meta_description'];
+        $ogImage = asset($post->meta['opengraph_image']);
+
 
         return view('single', [
             'post' => $post,
             'relatedPosts' => $relatedPosts,
             'metaTitle' => $metaTitle,
-            'metaDescription' => $metaDescription
+            'metaDescription' => $metaDescription,
+            'ogImage' => $ogImage,
         ]);
     }
 
