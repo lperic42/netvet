@@ -30,12 +30,12 @@
                 <div class="">
                     <div class="">
                         <div class="heading-section">
-                            <h2>Samo najbolje za Vaše ljubimce</h2>
+                            <h2>Zanimaju li vas savjeti <br>za pse ili mačke?</h2>
                             <img class="sectionbreak" src="images/sectionbreak3.png" alt="" >
                         </div>
                     </div>
                 </div>
-                <services link="{{ route('blogs') }}" ></services>
+                <services link="{{ route('blogs') }}"></services>
             </div>
         </div>
 
@@ -45,7 +45,7 @@
                     <div style="">
                         <div class="heading-section">
                             <h2>Zadnji blogovi</h2>
-                            <img src="images/sectionbreak2.png" alt="Slika koja dijeli dvije sekcije stranice" >
+                            <img class="sectionbreak" src="images/sectionbreak2.png" alt="Slika koja dijeli dvije sekcije stranice" >
                         </div>
                     </div>
                 </div>
