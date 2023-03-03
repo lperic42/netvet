@@ -63,7 +63,10 @@
     "repositories": [
         {
             "type": "path",
-            "url": "./wink"
+            "url": "./wink",
+            "options": {
+                "symlink": false
+            }
         }
     ]
 }
