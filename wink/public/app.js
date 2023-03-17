@@ -3046,6 +3046,7 @@ __webpack_require__.r(__webpack_exports__);
       imageUrl: null,
       layout: 'default',
       caption: '',
+      alt: '',
       imagePickerKey: '',
       uploadProgress: 0,
       uploading: false,
@@ -3062,6 +3063,7 @@ __webpack_require__.r(__webpack_exports__);
     this.$parent.$on('openingImageUploader', function (data) {
       if (data) {
         _this.caption = data.caption;
+        _this.alt = data.alt;
         _this.imageUrl = data.url;
         _this.layout = data.layout || 'default';
         _this.existingBlot = data.existingBlot;
@@ -3078,13 +3080,17 @@ __webpack_require__.r(__webpack_exports__);
       this.imageUrl = null;
       this.layout = 'default';
       this.caption = '';
+      this.alt = '';
     },
     updateImage: function updateImage(_ref) {
       var url = _ref.url,
-          caption = _ref.caption;
+          caption = _ref.caption,
+          alt = _ref.alt;
       this.imageUrl = url;
       this.caption = caption;
+      this.alt = alt;
       this.uploading = false;
+      console.log([this.imageUrl, this.caption, this.alt]);
     },
     applyImage: function applyImage() {
       if (!this.imageUrl) {
@@ -3094,6 +3100,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('updated', {
         url: this.imageUrl,
         caption: this.caption,
+        alt: this.alt,
         existingBlot: this.existingBlot,
         layout: this.layout
       });
@@ -3437,11 +3444,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['postId', 'currentImageUrl', 'currentCaption'],
+  props: ['postId', 'currentImageUrl', 'currentCaption', 'currentAlt'],
   data: function data() {
     return {
       imageUrl: '',
       caption: '',
+      alt: '',
       imagePickerKey: '',
       uploadProgress: 0,
       uploading: false,
@@ -3454,6 +3462,7 @@ __webpack_require__.r(__webpack_exports__);
     this.$parent.$on('openingFeaturedImageUploader', function (data) {
       _this.imageUrl = _this.currentImageUrl;
       _this.caption = _this.currentCaption;
+      _this.alt = _this.currentAlt;
       _this.modalShown = true;
     });
   },
@@ -3464,7 +3473,8 @@ __webpack_require__.r(__webpack_exports__);
     saveImage: function saveImage() {
       this.$emit('changed', {
         url: this.imageUrl,
-        caption: this.caption
+        caption: this.caption,
+        alt: this.alt
       });
       this.close();
     },
@@ -3490,9 +3500,11 @@ __webpack_require__.r(__webpack_exports__);
      */
     updateImage: function updateImage(_ref) {
       var url = _ref.url,
-          caption = _ref.caption;
+          caption = _ref.caption,
+          alt = _ref.alt;
       this.imageUrl = url;
       this.caption = caption;
+      this.alt = alt;
       this.uploading = false;
     },
 
@@ -3666,6 +3678,7 @@ __webpack_require__.r(__webpack_exports__);
         this.form.author_id = data.author_id || '';
         this.form.featured_image = data.featured_image;
         this.form.featured_image_caption = data.featured_image_caption;
+        this.form.featured_image_alt = data.featured_image_alt;
         this.form.meta = {
           meta_description: data.meta.meta_description || '',
           opengraph_title: data.meta.opengraph_title || '',
@@ -3772,9 +3785,11 @@ __webpack_require__.r(__webpack_exports__);
      */
     featuredImageChanged: function featuredImageChanged(_ref) {
       var url = _ref.url,
-          caption = _ref.caption;
+          caption = _ref.caption,
+          alt = _ref.alt;
       this.form.featured_image = url;
       this.form.featured_image_caption = caption;
+      this.form.featured_image_alt = alt;
     },
 
     /**
@@ -3783,6 +3798,7 @@ __webpack_require__.r(__webpack_exports__);
     featuredImageRemoved: function featuredImageRemoved() {
       this.form.featured_image = null;
       this.form.featured_image_caption = null;
+      this.form.featured_image_alt = null;
     },
 
     /**
@@ -8145,7 +8161,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -8183,7 +8199,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -8202,7 +8218,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -48471,6 +48487,38 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "input-group" }, [
                   _c("label", { staticClass: "input-label" }, [
+                    _vm._v("Alt Text")
+                  ]),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.alt,
+                        expression: "alt"
+                      }
+                    ],
+                    ref: "caption",
+                    staticClass: "input",
+                    attrs: {
+                      rows: "2",
+                      placeholder: "Add Alt Text to the image"
+                    },
+                    domProps: { value: _vm.alt },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.alt = $event.target.value
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "input-group" }, [
+                  _c("label", { staticClass: "input-label" }, [
                     _vm._v("Layout")
                   ]),
                   _vm._v(" "),
@@ -49363,6 +49411,38 @@ var render = function() {
                       }
                     }
                   })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "input-group" }, [
+                  _c("label", { staticClass: "input-label" }, [
+                    _vm._v("Alt Text")
+                  ]),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.alt,
+                        expression: "alt"
+                      }
+                    ],
+                    ref: "caption",
+                    staticClass: "input",
+                    attrs: {
+                      rows: "2",
+                      placeholder: "Add alt text to the image"
+                    },
+                    domProps: { value: _vm.alt },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.alt = $event.target.value
+                      }
+                    }
+                  })
                 ])
               ])
             : _vm._e(),
@@ -50055,7 +50135,8 @@ var render = function() {
         attrs: {
           "post-id": this.form.id,
           "current-image-url": _vm.form.featured_image,
-          "current-caption": _vm.form.featured_image_caption
+          "current-caption": _vm.form.featured_image_caption,
+          "current-alt": _vm.form.featured_image_alt
         },
         on: {
           changed: _vm.featuredImageChanged,
@@ -50104,7 +50185,7 @@ var render = function() {
                   staticClass: "py-1 px-2 btn-primary text-sm",
                   attrs: { to: { name: "post-new" } }
                 },
-                [_vm._v("\n                New Postinjo\n            ")]
+                [_vm._v("\n                New Post\n            ")]
               )
             ],
             1
@@ -67574,7 +67655,7 @@ function (_BlockEmbed) {
       var img = document.createElement('img');
       node.setAttribute('contenteditable', false);
       node.dataset.layout = value.layout;
-      img.setAttribute('alt', value.caption);
+      img.setAttribute('alt', value.alt);
       img.setAttribute('src', value.url);
       node.appendChild(img);
 

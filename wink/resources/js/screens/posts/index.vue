@@ -87,7 +87,7 @@
         <page-header>
             <template slot="right-side">
                 <router-link :to="{name:'post-new'}" class="py-1 px-2 btn-primary text-sm">
-                    New Postinjo
+                    New Post
                 </router-link>
             </template>
         </page-header>

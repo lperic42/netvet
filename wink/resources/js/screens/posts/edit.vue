@@ -157,6 +157,7 @@
                     this.form.author_id = data.author_id || '';
                     this.form.featured_image = data.featured_image;
                     this.form.featured_image_caption = data.featured_image_caption;
+                    this.form.featured_image_alt = data.featured_image_alt;
                     this.form.meta = {
                         meta_description: data.meta.meta_description || '',
                         opengraph_title: data.meta.opengraph_title || '',
@@ -265,9 +266,10 @@
             /**
              * Handle the change event of featured images.
              */
-            featuredImageChanged({url, caption}) {
+            featuredImageChanged({url, caption, alt}) {
                 this.form.featured_image = url;
                 this.form.featured_image_caption = caption;
+                this.form.featured_image_alt = alt
             },
 
 
@@ -277,6 +279,7 @@
             featuredImageRemoved() {
                 this.form.featured_image = null;
                 this.form.featured_image_caption = null;
+                this.form.featured_image_alt = null;
             },
 
 
@@ -518,7 +521,8 @@
                                  @changed="featuredImageChanged"
                                  @removed="featuredImageRemoved"
                                  :current-image-url="form.featured_image"
-                                 :current-caption="form.featured_image_caption"></featured-image-uploader>
+                                 :current-caption="form.featured_image_caption"
+                                 :current-alt = form.featured_image_alt></featured-image-uploader>
     </div>
 </template>
 

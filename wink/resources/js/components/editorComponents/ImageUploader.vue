@@ -8,6 +8,7 @@
                 imageUrl: null,
                 layout: 'default',
                 caption: '',
+                alt: '',
                 imagePickerKey: '',
                 uploadProgress: 0,
                 uploading: false,
@@ -22,6 +23,7 @@
             this.$parent.$on('openingImageUploader', data => {
                 if (data) {
                     this.caption = data.caption;
+                    this.alt = data.alt;
                     this.imageUrl = data.url;
                     this.layout = data.layout || 'default';
                     this.existingBlot = data.existingBlot;
@@ -45,14 +47,19 @@
                 this.layout = 'default';
 
                 this.caption = '';
+
+                this.alt = '';
             },
 
 
-            updateImage({url, caption}) {
+            updateImage({url, caption, alt}) {
                 this.imageUrl = url;
                 this.caption = caption;
+                this.alt = alt;
 
                 this.uploading = false;
+
+                console.log([this.imageUrl, this.caption, this.alt])
             },
 
 
@@ -64,6 +71,7 @@
                 this.$emit('updated', {
                     url: this.imageUrl,
                     caption: this.caption,
+                    alt: this.alt,
                     existingBlot: this.existingBlot,
                     layout: this.layout,
                 });
@@ -91,6 +99,11 @@
             <div class="input-group">
                 <label class="input-label">Caption</label>
                 <textarea rows="2" v-model="caption" ref="caption" class="input" placeholder="Add caption to the image"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Alt Text</label>
+                <textarea rows="2" v-model="alt" ref="caption" class="input" placeholder="Add Alt Text to the image"></textarea>
             </div>
 
             <div class="input-group">

@@ -10,7 +10,7 @@ class WinkImageBlot extends BlockEmbed {
         node.setAttribute('contenteditable', false);
         node.dataset.layout = value.layout;
 
-        img.setAttribute('alt', value.caption);
+        img.setAttribute('alt', value.alt);
         img.setAttribute('src', value.url);
         node.appendChild(img);
 

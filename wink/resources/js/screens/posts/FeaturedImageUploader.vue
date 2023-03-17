@@ -2,12 +2,13 @@
     import _ from 'lodash';
 
     export default {
-        props: ['postId', 'currentImageUrl', 'currentCaption'],
+        props: ['postId', 'currentImageUrl', 'currentCaption', 'currentAlt'],
 
         data() {
             return {
                 imageUrl: '',
                 caption: '',
+                alt: '',
                 imagePickerKey: '',
                 uploadProgress: 0,
                 uploading: false,
@@ -21,7 +22,7 @@
             this.$parent.$on('openingFeaturedImageUploader', data => {
                 this.imageUrl = this.currentImageUrl;
                 this.caption = this.currentCaption;
-
+                this.alt = this.currentAlt
                 this.modalShown = true;
             });
         },
@@ -32,7 +33,7 @@
              * Save the image.
              */
             saveImage() {
-                this.$emit('changed', {url: this.imageUrl, caption: this.caption});
+                this.$emit('changed', {url: this.imageUrl, caption: this.caption, alt: this.alt});
 
                 this.close();
             },
@@ -59,9 +60,10 @@
             /**
              * Update the selected image.
              */
-            updateImage({url, caption}) {
+            updateImage({url, caption, alt}) {
                 this.imageUrl = url;
                 this.caption = caption;
+                this.alt = alt;
 
                 this.uploading = false;
             },
@@ -97,6 +99,10 @@
             <div class="input-group">
                 <label class="input-label">Caption</label>
                 <textarea rows="2" v-model="caption" ref="caption" class="input" placeholder="Add caption to the image"></textarea>
+            </div>
+            <div class="input-group">
+                <label class="input-label">Alt Text</label>
+                <textarea rows="2" v-model="alt" ref="caption" class="input" placeholder="Add alt text to the image"></textarea>
             </div>
         </div>
 

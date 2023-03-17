@@ -78,6 +78,7 @@ class PostsController
             'author_id' => request('author_id'),
             'featured_image' => request('featured_image'),
             'featured_image_caption' => request('featured_image_caption', ''),
+            'featured_image_alt' => request('featured_image_alt', ''),
             'publish_date' => request('publish_date', ''),
             'meta' => request('meta', (object) []),
         ];
