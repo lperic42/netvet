@@ -58,8 +58,6 @@
                 this.alt = alt;
 
                 this.uploading = false;
-
-                console.log([this.imageUrl, this.caption, this.alt])
             },
 
 

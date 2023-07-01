@@ -2201,10 +2201,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       var url = _ref.url,
           caption = _ref.caption,
           existingBlot = _ref.existingBlot,
-          layout = _ref.layout;
+          layout = _ref.layout,
+          alt = _ref.alt;
       var values = {
         url: url,
         caption: caption,
+        alt: alt,
         layout: layout
       };
 
@@ -3090,7 +3092,6 @@ __webpack_require__.r(__webpack_exports__);
       this.caption = caption;
       this.alt = alt;
       this.uploading = false;
-      console.log([this.imageUrl, this.caption, this.alt]);
     },
     applyImage: function applyImage() {
       if (!this.imageUrl) {
@@ -8161,7 +8162,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -67656,8 +67657,10 @@ function (_BlockEmbed) {
       node.setAttribute('contenteditable', false);
       node.dataset.layout = value.layout;
       img.setAttribute('alt', value.alt);
+      img.setAttribute('data-caption', value.caption);
       img.setAttribute('src', value.url);
       node.appendChild(img);
+      console.log(value);
 
       if (value.caption) {
         var caption = document.createElement('p');
@@ -67671,9 +67674,18 @@ function (_BlockEmbed) {
     key: "value",
     value: function value(node) {
       var img = node.querySelector('img');
+      var caption = '';
+
+      if (img.getAttribute('alt').length > 0 && !img.getAttribute('data-caption')) {
+        caption = img.getAttribute('alt');
+      } else {
+        caption = img.getAttribute('data-caption');
+      }
+
       return {
         layout: node.dataset.layout,
-        caption: img.getAttribute('alt'),
+        alt: img.getAttribute('alt'),
+        caption: caption,
         url: img.getAttribute('src')
       };
     }

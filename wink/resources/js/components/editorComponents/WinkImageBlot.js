@@ -11,9 +11,10 @@ class WinkImageBlot extends BlockEmbed {
         node.dataset.layout = value.layout;
 
         img.setAttribute('alt', value.alt);
+        img.setAttribute('data-caption', value.caption);
         img.setAttribute('src', value.url);
         node.appendChild(img);
-
+        console.log(value);
         if (value.caption) {
             let caption = document.createElement('p');
             caption.innerHTML = value.caption;
@@ -25,10 +26,18 @@ class WinkImageBlot extends BlockEmbed {
 
     static value(node) {
         let img = node.querySelector('img');
+        let caption = '';
+
+        if(img.getAttribute('alt').length > 0 && !img.getAttribute('data-caption')) {
+            caption = img.getAttribute('alt');
+        } else {
+            caption = img.getAttribute('data-caption')
+        }
 
         return {
             layout: node.dataset.layout,
-            caption: img.getAttribute('alt'),
+            alt: img.getAttribute('alt'),
+            caption: caption,
             url: img.getAttribute('src')
         };
     }
